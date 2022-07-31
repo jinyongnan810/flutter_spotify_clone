@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Spotify UI',
         debugShowCheckedModeBanner: false,
+        themeMode: ThemeMode.dark,
         darkTheme: ThemeData(
             brightness: Brightness.dark,
             appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
