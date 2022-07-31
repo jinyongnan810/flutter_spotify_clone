@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_spotify_clone/widgets/side_menu.dart';
 
 class RootScreen extends StatelessWidget {
   const RootScreen({Key? key}) : super(key: key);
@@ -11,13 +12,7 @@ class RootScreen extends StatelessWidget {
       body: Column(children: [
         Expanded(
             child: Row(
-          children: [
-            Container(
-              color: Colors.green,
-              width: 288,
-              height: double.infinity,
-            )
-          ],
+          children: const [SideMenu()],
         )),
         Container(
           width: double.infinity,
