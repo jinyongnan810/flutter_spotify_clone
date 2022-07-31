@@ -4,4 +4,4 @@
 
 # limits
 
-- set minimun window size not working on windows 11
+- set minimun window size not working on windows 11(it works, but needed set the scale to 100%)

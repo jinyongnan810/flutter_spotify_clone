@@ -36,10 +36,6 @@ dependencies:
   google_fonts: ^3.0.1
   flutter_riverpod: ^1.0.4
   desktop_window: ^0.4.0
-  window_size:
-    git:
-      url: git://github.com/google/flutter-desktop-embedding.git
-      path: plugins/window_size
 
 dev_dependencies:
   flutter_test:

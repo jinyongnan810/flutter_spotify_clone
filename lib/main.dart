@@ -4,17 +4,13 @@ import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spotify_clone/screens/root_screen.dart';
-import 'package:window_size/window_size.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // not working on
-  if (!kIsWeb && (Platform.isMacOS || Platform.isLinux)) {
+  if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) {
     await DesktopWindow.setMinWindowSize(const Size(600, 800));
-  }
-  if (Platform.isWindows) {
-    setWindowMinSize(const Size(600, 800));
   }
   runApp(const MyApp());
 }
