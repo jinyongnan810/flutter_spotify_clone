@@ -3,6 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_spotify_clone/data.dart';
 import 'package:flutter_spotify_clone/widgets/playlist_header.dart';
+import 'package:flutter_spotify_clone/widgets/tracks_list.dart';
 
 class PlayListScreen extends StatefulWidget {
   final Playlist playlist;
@@ -116,9 +117,10 @@ class _PlayListScreenState extends State<PlayListScreen> {
           child: Scrollbar(
             controller: _scrollController,
             thumbVisibility: true,
-            child: ListView(
-                controller: _scrollController,
-                children: [PlaylistHeader(playlist: widget.playlist)]),
+            child: ListView(controller: _scrollController, children: [
+              PlaylistHeader(playlist: widget.playlist),
+              TracksList(tracks: widget.playlist.songs)
+            ]),
           ),
         ));
   }
