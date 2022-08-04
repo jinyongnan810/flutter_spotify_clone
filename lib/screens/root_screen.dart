@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_spotify_clone/data.dart';
 import 'package:flutter_spotify_clone/providers/selected_song.dart';
 import 'package:flutter_spotify_clone/screens/playlist_screen.dart';
+import 'package:flutter_spotify_clone/widgets/current_track.dart';
 import 'package:flutter_spotify_clone/widgets/side_menu.dart';
 
 class RootScreen extends StatelessWidget {
@@ -21,15 +22,7 @@ class RootScreen extends StatelessWidget {
             Expanded(child: PlayListScreen(playlist: lofihiphopPlaylist))
           ],
         )),
-        Consumer(builder: (ctx, ref, _) {
-          final selectedSong = ref.watch(selectedSongProvider);
-          return Container(
-            width: double.infinity,
-            height: 84,
-            color: Colors.blue,
-            child: Center(child: Text(selectedSong?.title ?? 'Not Selected')),
-          );
-        })
+        const CurrentTrack()
       ]),
     );
   }
